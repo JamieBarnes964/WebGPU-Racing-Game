@@ -1,0 +1,26 @@
+{
+  "name": "webgpu-racing-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run install-missing-dependencies && npm run build",
+    "install-missing-dependencies": "npm i",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.29",
+    "@webgpu/types": "^0.1.40",
+    "gl-matrix": "^3.4.3",
+    "jquery": "^3.7.1",
+    "node": "^21.7.1",
+    "ts-loader": "^9.5.1",
+    "ts-shader-loader": "^2.0.2",
+    "typescript": "^5.4.2",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
