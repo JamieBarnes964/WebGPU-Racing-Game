@@ -1,0 +1,14 @@
+.gfx_canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: #332E2D;
+}
+
+canvas {
+    outline: 15px solid #231F1E;
+}

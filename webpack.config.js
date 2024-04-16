@@ -14,16 +14,23 @@ module.exports = {
                 test: /\.ts$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "ts-loader"
-                }
+                    loader: "ts-loader",
+                },
             },
             {
                 test: /\.wgsl$/,
                 use: {
-                    loader: "ts-shader-loader"
-                }
-            }
-        ]
+                    loader: "ts-shader-loader",
+                },
+            },
+            {
+                test: /\.(png|jpe?g)$/,
+                loader: "file-loader",
+                options: {
+                    name: "[name].[ext]",
+                },
+            },
+        ],
     },
     
     resolve: {
