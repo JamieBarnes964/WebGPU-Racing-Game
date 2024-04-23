@@ -3,6 +3,7 @@ export enum UserInputKey {
     Backward,
     Right,
     Left,
+    Handbrake,
 }
 
 export interface IUserInput {

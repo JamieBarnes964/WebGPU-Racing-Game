@@ -2,6 +2,7 @@ import { Renderer } from "../view/Renderer";
 import { Scene } from "../model/Scene";
 import $ from "jquery";
 import { UserInputKey } from "../model/interface/IUserInput";
+import { DebugOutput } from "./DebugOutput";
 
 export class App {
     
@@ -19,7 +20,8 @@ export class App {
         ["KeyW", UserInputKey.Forward],
         ["KeyS", UserInputKey.Backward],
         ["KeyA", UserInputKey.Left],
-        ["KeyD", UserInputKey.Right]
+        ["KeyD", UserInputKey.Right],
+        ["Space", UserInputKey.Handbrake]
     ]);
 
     constructor(canvas: HTMLCanvasElement) {
@@ -40,6 +42,7 @@ export class App {
     run = () => {
         var running: boolean = true;
 
+        DebugOutput.log("FPS", (1000 / (Date.now() - this.lastFrameEndTime)).toFixed(1).toString());
         this.scene.update(Date.now() - this.lastFrameEndTime);
 
         this.renderer.render(
